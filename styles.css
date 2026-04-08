@@ -88,14 +88,51 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
+.skip-link{
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
 
 /* ///ADD/// Navigation Styles */
 
-/* ///ADD/// Global Layout Styles */
+/* ///ADD/// Global Layout Styles------------------------- */
 
-/* ///ADD/// Global Text Styles */
+form {
+  background-color: var(--news-flash);
+}
 
+header {
+  background-color: var(--blue-bulletin);
+}
 
+footer{
+  background-color: var(--blue-bulletin);
+}
+
+/* ///ADD/// Global Text Styles-----------------------------*/
+
+footer {
+  color: var(--watchdog-white);
+  text-decoration: none;
+}
+
+header {
+  color: var(--watchdog-white);
+}
+
+.my-social-links a{
+  text-decoration: none;
+  color: var(--watchdog-white);
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--watchdog-white);
+}
 /* ///ADD/// medium styles 620px */
 
 
