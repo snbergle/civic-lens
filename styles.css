@@ -101,26 +101,112 @@ body.dark-mode {
 
 /* ///ADD/// Global Layout Styles------------------------- */
 
-form {
-  background-color: var(--news-flash);
+#footer-content, #main, #header-content { /*default small size attempt with background disruption*/
+  padding: 0 30px;
 }
 
 header {
   background-color: var(--blue-bulletin);
+}
+
+
+form {
+  background-color: var(--news-flash);
+}
+
+.my-video1  {
+  background-color: var(--news-flash);
+  padding: 20px;
+  margin:  10px 0;
+}
+
+.my-video2  {
+  background-color: var(--news-flash);
+  padding: 20px;
+  margin: 10px 0;
+}
+/*COME BACK TO THIS TMRW, BOTH BOXES NEED TO STACK ON DEFAULT SMALL AND BE THE SAME SIZE*/
+.both-vids {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 10px;
 }
 
 footer{
   background-color: var(--blue-bulletin);
 }
 
-/* ///ADD/// Global Text Styles-----------------------------*/
+.my-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+}
 
-footer {
-  color: var(--watchdog-white);
-  text-decoration: none;
+.my-social-links a {
+  display: flex;
+  background-color: var(--news-flash);
+  padding: 20px 10px;
+  border-color: var(--news-flash);
+  transition:  0.4s ease;
+  
+}
+
+.my-social-links a:hover{
+  background-color: var(--blue-bulletin);
+  border: 2px solid var(--news-flash);
+}
+
+footer h2 {
+  padding-top: 30px;
+}
+
+footer p {
+padding-top: 10px;
+padding-bottom: 20px;
+}
+
+/* ///ADD/// Global Text Styles---------------------------------------------------------*/
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.1rem;
 }
 
 header {
+  color: var(--watchdog-white);
+}
+
+header h1{
+  padding: 10px 0;
+}
+
+header p{
+  padding-bottom: 10px;
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--watchdog-white);
+}
+
+.my-video1{
+  color: var(--watchdog-white);
+}
+
+.my-video2 {
   color: var(--watchdog-white);
 }
 
@@ -129,17 +215,48 @@ header {
   color: var(--watchdog-white);
 }
 
-nav a{
-  text-decoration: none;
-  color: var(--watchdog-white);
+.my-social-links a{
+  font-size: 1.1rem;
+  font-weight: 600;
 }
-/* ///ADD/// medium styles 620px */
+
+footer {
+  color: var(--watchdog-white);
+  text-decoration: none;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+/* ///ADD/// medium styles 620px------------------------------------------- */
+@media screen and (min-width: 620px) {
+  #footer-content, #main, #header-content{
+    padding: 0 40px;
+  }
+  
+}
 
 
 /* ///ADD/// large styles 920px */
+@media screen and (min-width: 920px) {
+  #footer-content, #main, #header-content{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
 
 
 /* ///ADD/// x-large styles 1024px */
+@media screen and (min-width: 1024px){
+  #footer-content, #main, #header-content{
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
+
+}
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */

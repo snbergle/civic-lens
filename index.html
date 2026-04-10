@@ -25,6 +25,7 @@
 <!-- ADD semantic and validated HTML -->
  <a href="#main" class="skip-link">Skip to Main Content</a>
 <!-- ADD skip to main content -->
+  <section id="header-content">
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
       <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
@@ -45,6 +46,7 @@
           <li><a href="#social">Social</a></li>
         </ul>
       </nav>
+  </section>
 </header>
     <main id="main">
       <h2>Welcome to Civic Lens</h2>
@@ -52,14 +54,20 @@
         <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
 
       <h2>Breaking News</h2>
+      
+      <div class="both-vids">
+        <div class="my-video1">
+          <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+          <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
+          <video controls> <source src="videos/water-management.mp4" type="video/mp4">Video is not supported.</video>
+        </div>
 
-        <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
-        <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
-        <video controls> <source src="videos/water-management.mp4" type="video/mp4">Video is not supported.</video>
-        
-        <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
-        <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
-        <video controls> <source src="videos/voter-suppression.mp4" type="video/mp4">Video is not supported.</video>
+        <div class="my-video2">
+          <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
+          <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
+          <video controls> <source src="videos/voter-suppression.mp4" type="video/mp4">Video is not supported.</video>
+        </div>
+      </div>
         
       <h2>Featured Articles</h2>
         
@@ -123,18 +131,21 @@
           <input type="submit" value="Subscribe">
         </form>
     </main>
+
     <footer>
-      <h2>Follow Us</h2>
+      <section id="footer-content">
+        <h2>Follow Us</h2>
 
-      <ul class=my-social-links>
-        <li><a href="#">Twitter/X</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
+        <ul class=my-social-links>
+          <li><a href="#">Twitter/X</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
 
-        &copy; 2025 Civic Lens. All rights reserved.
+          <p>&copy; 2025 Civic Lens. All rights reserved.</p>
+      </section>
     </footer>
         
         
