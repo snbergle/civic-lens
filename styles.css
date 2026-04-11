@@ -87,8 +87,8 @@ body.dark-mode {
   cursor: pointer;
 }
 
-/* ///ADD/// Skip Link Styles */
-.skip-link{
+/* ///ADD/// Skip Link Styles --------------------------------------------*/
+.skip-link {
   left: -10000px;
   top: auto;
   width: 1px;
@@ -97,9 +97,58 @@ body.dark-mode {
   position: absolute;
 }
 
-/* ///ADD/// Navigation Styles */
+.skip-link a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
 
-/* ///ADD/// Global Layout Styles------------------------- */
+/* ///ADD/// Navigation Styles -------------------------------------------------------------*/
+
+nav {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--watchdog-white);
+  background-color: var(--news-flash);
+  transition:  0.4s ease;
+  padding: 3px;
+  margin: 1px 0;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background-color: var(--blue-bulletin);
+  border: 2px solid var(--news-flash);
+}
+
+.menu-button {
+  background-color: var(--news-flash);
+  padding: 5px 3px;
+  margin: 1px 0;
+  font-weight: 600;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+}
+
+.menu li a, .menu-button{
+  display: block;
+  width: 100%;
+}
+
+#menu-toggle:checked + .menu-button + .menu {
+  display: flex;
+}
+
+
+/* ///ADD/// Global Layout Styles-------------------------------------------------------*/
 
 #footer-content, #main, #header-content { /*default small size attempt with background disruption*/
   padding: 0 30px;
@@ -125,12 +174,26 @@ form {
   padding: 20px;
   margin: 10px 0;
 }
-/*COME BACK TO THIS TMRW, BOTH BOXES NEED TO STACK ON DEFAULT SMALL AND BE THE SAME SIZE*/
+
+.both-vids h3 {
+  border-bottom: 2px solid var(--watchdog-white);
+  padding: 8px 0;
+}
+
+.both-vids p{
+  padding: 8px 0;
+}
+
 .both-vids {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: start;
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 footer{
@@ -170,19 +233,19 @@ padding-bottom: 20px;
 /* ///ADD/// Global Text Styles---------------------------------------------------------*/
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.7rem;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.7rem;
 }
 
 h3 {
-  font-size: 1.7rem;
+  font-size: 2.0rem;
 }
 
-p {
-  font-size: 1.1rem;
+p, .menu-button, nav a {
+  font-size: 1.3rem;
 }
 
 header {
@@ -195,11 +258,6 @@ header h1{
 
 header p{
   padding-bottom: 10px;
-}
-
-nav a{
-  text-decoration: none;
-  color: var(--watchdog-white);
 }
 
 .my-video1{
@@ -235,27 +293,100 @@ footer p {
   #footer-content, #main, #header-content{
     padding: 0 40px;
   }
+
+  .both-vids {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .menu-button, #menu-toggle {
+    display: none;
+  }
+
+  .menu li a {
+    display: inline-block;
+    padding: 10px 5px;
+  }
+
+
+  nav {
+    text-align: left;
+  }
   
 }
 
 
-/* ///ADD/// large styles 920px */
+/* ///ADD/// large styles 920px -----------------------------------------------*/
 @media screen and (min-width: 920px) {
   #footer-content, #main, #header-content{
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .both-vids {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .menu-button, #menu-toggle {
+    display: none;
+  }
+
+  .menu li a {
+    display: inline-block;
+    padding: 10px 5px;
+  }
+
+
+  nav {
+    text-align: left;
+  }
 }
 
 
-/* ///ADD/// x-large styles 1024px */
+/* ///ADD/// x-large styles 1024px ------------------------------------------------------------*/
 @media screen and (min-width: 1024px){
   #footer-content, #main, #header-content{
     max-width: 1700px;
     margin: 0 auto;
   }
 
+  .both-vids {
+    grid-template-columns: 1fr 1fr;
+  }
 
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .menu-button, #menu-toggle {
+    display: none;
+  }
+
+  .menu li a {
+    display: inline-block;
+    padding: 10px 5px;
+  }
+
+
+  nav {
+    text-align: left;
+  }
 }
 
 
