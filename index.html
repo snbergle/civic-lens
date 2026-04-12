@@ -68,56 +68,78 @@
           <video controls> <source src="videos/voter-suppression.mp4" type="video/mp4">Video is not supported.</video>
         </div>
       </div>
-        
       <h2>Featured Articles</h2>
+      <div class="grouped-pages">
+        <div class="article-pages">
+          <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
+          <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+        </div>
+
+        <div class="article-pages">
+          <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
+          <p>An investigative series on cash bail and its disproportionate impact.</p>
+        </div>
         
-        <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
-        <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+        <div class="article-pages">
+          <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
+          <p>Humanizing the labor that keeps households and economies afloat.</p>
+        </div>
         
-        <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
-        <p>An investigative series on cash bail and its disproportionate impact.</p>
+        <div class="article-pages">
+          <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
+          <p>Data visualization showing systemic inequality in real estate today.</p>
+        </div>
         
-        <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
-        <p>Humanizing the labor that keeps households and economies afloat.</p>
+        <div class="article-pages">
+          <h3>Climate Injustice: Who Pays for Pollution?</h3>
+          <p>Communities of color bear the brunt of environmental damage.</p>
+        </div>
         
-        <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
-        <p>Data visualization showing systemic inequality in real estate today.</p>
+        <div class="article-pages">
+          <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
+          <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+        </div>
         
-        <h3>Climate Injustice: Who Pays for Pollution?</h3>
-        <p>Communities of color bear the brunt of environmental damage.</p>
+        <div class="article-pages">
+          <h3>Food Deserts and Corporate Abandonment</h3>
+          <p>Why access to nutrition is a zip code lottery.</p>
+        </div>
         
-        <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
-        <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+        <div class="article-pages">
+          <h3>Policing Mental Health: A Broken Response System</h3>
+          <p>Examining police interactions with those in crisis.</p>
+        </div>
         
-        <h3>Food Deserts and Corporate Abandonment</h3>
-        <p>Why access to nutrition is a zip code lottery.</p>
+        <div class="article-pages">
+          <h3>The Disinformation Economy</h3>
+          <p>Tracing profit motives behind fake news empires.</p>
+        </div>
         
-        <h3>Policing Mental Health: A Broken Response System</h3>
-        <p>Examining police interactions with those in crisis.</p>
+        <div class="article-pages">
+          <h3>Facing the Algorithm: AI and Racial Bias</h3>
+          <p>The coded inequalities that shape our lives.</p>
+        </div>
         
-        <h3>The Disinformation Economy</h3>
-        <p>Tracing profit motives behind fake news empires.</p>
+        <div class="article-pages">
+          <h3>The Voting Maze</h3>
+          <p>A guide to understanding your rights amid changing laws.</p>
+        </div>
         
-        <h3>Facing the Algorithm: AI and Racial Bias</h3>
-        <p>The coded inequalities that shape our lives.<p>
-        
-        <h3>The Voting Maze</h3>
-        <p>A guide to understanding your rights amid changing laws.</p>
-        
-        <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
-        <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
-        
-        
+        <div class="article-pages">
+          <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
+          <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+        </div>
+      </div>
       <h2>Stay Informed. Stay Empowered.</h2>
         <p>Receive text messages with the news you want to know.</p>
         <form action="https://wp.zybooks.com/form-viewer.php" method="post">
-
-          <label for="my-name">Name</label>
-          <input type="text" id="my-name" name="my-name" autocomplete="name">
-          
-          <label for="my-phone">Mobile</label>
-          <input type="tel" id="my-phone" name="my-phone" autocomplete="tel">
-
+          <div class="my-inputs">
+            <label for="my-name">Name</label>
+            <input type="text" id="my-name" name="my-name" autocomplete="name">
+            
+            <label for="my-phone">Mobile</label>
+            <input type="tel" id="my-phone" name="my-phone" autocomplete="tel">
+          </div>
           <fieldset>
             <legend>Notification Preferences</legend>
             <label><input type="checkbox" name="notif-pref" value="breaking-news">Breaking News</label>
@@ -128,7 +150,7 @@
             <label><input type="checkbox" name="notif-pref" value="world">World</label>
             <label><input type="checkbox" name="notif-pref" value="financial">Financial</label>
           </fieldset>
-          <input type="submit" value="Subscribe">
+          <input type="submit" id="my-submit" name="my-submit" value="Subscribe">
         </form>
     </main>
 

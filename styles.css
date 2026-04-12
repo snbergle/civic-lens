@@ -114,7 +114,7 @@ nav a {
   text-decoration: none;
   color: var(--watchdog-white);
   background-color: var(--news-flash);
-  transition:  0.4s ease;
+  transition:  0.6s ease;
   padding: 3px;
   margin: 1px 0;
   font-weight: 600;
@@ -135,7 +135,6 @@ nav a:hover {
 .menu {
   display: none;
   flex-direction: column;
-  list-style: none;
 }
 
 .menu li a, .menu-button{
@@ -146,7 +145,7 @@ nav a:hover {
 
 /* ///ADD/// Global Layout Styles-------------------------------------------------------*/
 
-#footer-content, #main, #header-content { /*default small size attempt with background disruption*/
+#footer-content, #main, #header-content { /*default small size attempt without background disruption*/
   padding: 0 30px;
 }
 
@@ -154,21 +153,45 @@ header {
   background-color: var(--blue-bulletin);
 }
 
+header h1{
+  padding: 10px 0;
+}
 
-form {
-  background-color: var(--news-flash);
+header p{
+  padding-bottom: 10px;
+}
+
+#main h2{
+  padding: 8px 0;
+  margin-top: 55px;
+  margin-bottom: 15px;
+}
+
+#main .tagline {
+  padding: 10px 0;
+  text-align: center;
 }
 
 .my-video1  {
   background-color: var(--news-flash);
   padding: 20px;
   margin:  10px 0;
+  transition: 0.4s ease;
+  border: 2px solid var(--blue-bulletin);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .my-video2  {
   background-color: var(--news-flash);
   padding: 20px;
   margin: 10px 0;
+  transition: 0.4s ease;
+  border: 2px solid var(--blue-bulletin);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.my-video1:hover, .my-video2:hover {
+  transform: scale(1.03);
 }
 
 .both-vids h3 {
@@ -192,6 +215,92 @@ video {
   height: auto;
 }
 
+.grouped-pages{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.article-pages {
+  border: 2px solid var(--blue-bulletin);
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.4s ease;
+}
+
+.article-pages h3 {
+  margin-bottom: 15px;
+}
+
+.article-pages p {
+  margin-top: 15px;
+}
+
+.article-pages h3{
+  border-bottom: 2px solid var(--blue-bulletin);
+}
+
+.article-pages:hover {
+  transform: scale(1.05);
+}
+
+form {
+  background-color: var(--news-flash);
+  max-width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: 2px solid var(--blue-bulletin);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.my-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#my-phone, #my-name {
+  width: 100%;
+  border: 1px solid var(--blue-bulletin);
+}
+
+form input{
+  padding: 10px 0;
+}
+
+form label {
+  display: block;
+  padding: 5px 0;
+}
+
+form legend {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--blue-bulletin);
+  accent-color: var(--blue-bulletin);
+}
+
+#my-submit {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  border: 2px solid var(--blue-bulletin);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--blue-bulletin);
+  transition:  0.4s ease;
+  
+}
+
+#my-submit:hover {
+  background-color: var(--watchdog-white);
+}
+
 footer{
   background-color: var(--blue-bulletin);
 }
@@ -209,7 +318,6 @@ footer{
   padding: 20px 10px;
   border-color: var(--news-flash);
   transition:  0.4s ease;
-  
 }
 
 .my-social-links a:hover{
@@ -222,8 +330,9 @@ footer h2 {
 }
 
 footer p {
-padding-top: 10px;
-padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 /* ///ADD/// Global Text Styles---------------------------------------------------------*/
@@ -236,11 +345,11 @@ h2 {
   font-size: 2.7rem;
 }
 
-h3 {
+h3, #my-submit {
   font-size: 2.0rem;
 }
 
-p, .menu-button, nav a {
+p, .menu-button, nav a, form label, legend {
   font-size: 1.3rem;
 }
 
@@ -248,12 +357,9 @@ header {
   color: var(--watchdog-white);
 }
 
-header h1{
-  padding: 10px 0;
-}
-
-header p{
-  padding-bottom: 10px;
+#main .tagline {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .my-video1{
@@ -262,6 +368,22 @@ header p{
 
 .my-video2 {
   color: var(--watchdog-white);
+}
+
+form {
+  color: var(--watchdog-white);
+}
+
+form legend {
+  font-weight: 600;
+}
+
+#my-submit {
+  color: var(--watchdog-white);
+}
+
+#my-submit:hover {
+  color: var(--blue-bulletin);
 }
 
 .my-social-links a{
@@ -278,11 +400,6 @@ footer {
   color: var(--watchdog-white);
   text-decoration: none;
 }
-
-footer p {
-  text-align: center;
-}
-
 
 /* ///ADD/// medium styles 620px------------------------------------------- */
 @media screen and (min-width: 620px) {
@@ -310,11 +427,24 @@ footer p {
     padding: 10px 5px;
   }
 
-
   nav {
     text-align: left;
   }
   
+  fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .my-inputs {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .grouped-pages{
+      grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -345,9 +475,23 @@ footer p {
     padding: 10px 5px;
   }
 
-
   nav {
     text-align: left;
+  }
+
+  fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .my-inputs {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .grouped-pages{
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -379,14 +523,49 @@ footer p {
     padding: 10px 5px;
   }
 
-
   nav {
     text-align: left;
+  }
+
+  fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .my-inputs {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .grouped-pages{
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: dark){
+  body {
+    background-color: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
+
+@media (prefers-color-scheme: light){
+  body {
+    background-color: var(--watchdog-white); 
+    color: var(--truth-text); 
+  }
+}
+
+/*Pls correct me on this one if its wrong/inefficient*/
+@media (prefers-reduced-data: reduce){
+  .my-social-links a:hover, #my-submit:hover, .article-pages:hover, .my-video1:hover, .my-video2:hover, nav a:hover  {
+    transform: none;
+    transition: none;
+  }
+}
 
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked ------------------------------------*/
